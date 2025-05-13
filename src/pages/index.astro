@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wadhy Zahir Callan - Portafolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
@@ -14,9 +14,11 @@
 
     body {
       display: flex;
+      flex-direction: row;
       font-family: 'Roboto Mono', monospace;
       background-color: #1e1e1e;
       color: #ffffff;
+      min-height: 100vh;
     }
 
     .sidebar {
@@ -30,16 +32,19 @@
       box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     }
 
-    .sidebar img {
+    .avatar-placeholder {
       width: 120px;
+      height: 120px;
+      background-color: #ff6464;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
       border-radius: 50%;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto 20px;
-      transition: transform 0.3s;
-    }
-
-    .sidebar img:hover {
-      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     .sidebar h1 {
@@ -68,7 +73,6 @@
       flex-grow: 1;
       padding: 40px;
       overflow-y: auto;
-      animation: fadeIn 1s ease-in;
     }
 
     @keyframes fadeIn {
@@ -78,11 +82,11 @@
 
     .section {
       margin-bottom: 60px;
-      animation: fadeIn 1s ease-in;
+      animation: fadeIn 0.8s ease-in;
     }
 
     .section h2 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 20px;
       border-bottom: 2px solid #ff6464;
       display: inline-block;
@@ -126,67 +130,79 @@
     .tags span:hover {
       background-color: #ff3333;
     }
-	.avatar-placeholder {
-  width: 120px;
-  height: 120px;
-  background-color: #ff6464;
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
 
+    /* RESPONSIVE: móvil */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+      }
+
+      .sidebar p, .sidebar .email {
+        margin-bottom: 10px;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .section h2 {
+        font-size: 24px;
+      }
+
+      .job h3, .project h3, .education h3 {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
-	<aside class="sidebar">
-		<div class="avatar-placeholder">WZ</div>
-		<h1>Wadhy Zahir Callan</h1>
-		<p>Técnico Informático y Estudiante de Ingeniería Informática</p>
-		<p>Catamarca, Argentina</p>
-		<a class="email" href="mailto:zahircallan@gmail.com">zahircallan@gmail.com</a>
-		<p>Nacido en 2004, actualmente curso el 5to semestre de Ingeniería Informática. Me especializo en desarrollo full stack y disfruto trabajar con múltiples tecnologías modernas.</p>
-	  </aside>
-	  
+  <aside class="sidebar">
+    <div class="avatar-placeholder">WZ</div>
+    <h1>Wadhy Zahir Callan</h1>
+    <p>Técnico Informático y Estudiante de Ingeniería Informática</p>
+    <p>Catamarca, Argentina</p>
+    <a class="email" href="mailto:zahircallan@gmail.com">zahircallan@gmail.com</a>
+    <p>Nacido en 2004, actualmente curso el 5to semestre de Ingeniería Informática. Me especializo en desarrollo full stack y disfruto trabajar con múltiples tecnologías modernas.</p>
+  </aside>
 
   <main class="main">
     <section class="section projects">
-  <h2>Proyectos</h2>
+      <h2>Proyectos</h2>
+      <div class="project">
+        <h3>Tronik - Mesa de ayuda</h3>
+        <div class="details">
+          <ul>
+            <li>Plataforma web para gestión de tickets de soporte técnico.</li>
+            <li>Diseñada con frontend y backend integrados.</li>
+            <li>
+              <a href="https://tronik.com.ar/" style="color:#87ceeb" target="_blank">Ver proyecto</a> |
+              <a href="https://github.com/wadhyubp/tronik.git" style="color:#87ceeb" target="_blank">Repositorio GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="project">
-    <h3>Tronik - Mesa de ayuda</h3>
-    <div class="details">
-      <ul>
-        <li>Plataforma web para gestión de tickets de soporte técnico.</li>
-        <li>Diseñada con frontend y backend integrados.</li>
-        <li>
-          <a href="https://tronik.com.ar/" style="color:#87ceeb" target="_blank">Ver proyecto</a> |
-          <a href="https://github.com/wadhyubp/tronik.git" style="color:#87ceeb" target="_blank">Repositorio GitHub</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="project">
-    <h3>Influencers del Conocimiento</h3>
-    <div class="details">
-      <ul>
-        <li>Sitio web para un proyecto de investigación universitario.</li>
-        <li>Enfocado en la difusión del conocimiento académico.</li>
-        <li>
-          <a href="https://www.ubp.edu.ar/novedades/influencers-del-conocimiento-la-campana-de-micro-contenidos-de-la-ubp-para-activar-vocaciones-tecnologicas-y-hablar-de-la-industria-4-0-en-redes/"
-             style="color:#87ceeb" target="_blank">Ver proyecto</a>
-          <!-- No hay GitHub para este, así que lo dejamos sin enlace -->
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="project">
+        <h3>Influencers del Conocimiento</h3>
+        <div class="details">
+          <ul>
+            <li>Sitio web para un proyecto de investigación universitario.</li>
+            <li>Enfocado en la difusión del conocimiento académico.</li>
+            <li>
+              <a href="https://www.ubp.edu.ar/novedades/influencers-del-conocimiento-la-campana-de-micro-contenidos-de-la-ubp-para-activar-vocaciones-tecnologicas-y-hablar-de-la-industria-4-0-en-redes/"
+                 style="color:#87ceeb" target="_blank">Ver proyecto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section class="section education">
       <h2>Formación Académica</h2>
@@ -199,7 +215,7 @@
         </div>
       </div>
       <div class="education">
-        <h3>Curso de Desarrollo Web <span style="float:right; font-size:14px; color:#aaa"></span></h3>
+        <h3>Curso de Desarrollo Web</h3>
         <div class="details">
           <ul>
             <li>Academia Mastermind de NateGentille</li>
