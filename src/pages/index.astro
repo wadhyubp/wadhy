@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wadhy Zahir Callan - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Roboto Mono', monospace;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 300px;
+      background-color: #111;
+      padding: 30px 20px;
+      flex-shrink: 0;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar img {
+      width: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      transition: transform 0.3s;
+    }
+
+    .sidebar img:hover {
+      transform: scale(1.1);
+    }
+
+    .sidebar h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #ff6464;
+    }
+
+    .sidebar p {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .sidebar .email {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #ff6464;
+    }
+
+    .main {
+      flex-grow: 1;
+      padding: 40px;
+      overflow-y: auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ff6464;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .job, .project, .education {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #2a2a2a;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .job:hover, .project:hover, .education:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .job h3, .project h3, .education h3 {
+      font-size: 20px;
+      color: #ff6464;
+    }
+
+    .summary, .responsibilities, .details {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background-color: #ff6464;
+      color: white;
+      padding: 4px 8px;
+      margin: 4px 4px 0 0;
+      border-radius: 4px;
+      font-size: 12px;
+      transition: background-color 0.3s;
+    }
+
+    .tags span:hover {
+      background-color: #ff3333;
+    }
+	.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  background-color: #ff6464;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+  </style>
+</head>
+<body>
+	<aside class="sidebar">
+		<div class="avatar-placeholder">WZ</div>
+		<h1>Wadhy Zahir Callan</h1>
+		<p>Técnico Informático y Estudiante de Ingeniería Informática</p>
+		<p>Catamarca, Argentina</p>
+		<a class="email" href="mailto:zahircallan@gmail.com">zahircallan@gmail.com</a>
+		<p>Nacido en 2004, actualmente curso el 5to semestre de Ingeniería Informática. Me especializo en desarrollo full stack y disfruto trabajar con múltiples tecnologías modernas.</p>
+	  </aside>
+	  
+
+  <main class="main">
+    <section class="section projects">
+      <h2>Proyectos</h2>
+      <div class="project">
+        <h3>Tronik - Mesa de ayuda</h3>
+        <div class="details">
+          <ul>
+            <li>Plataforma web para gestión de tickets de soporte técnico.</li>
+            <li>Diseñada con frontend y backend integrados.</li>
+            <li><a href="#" style="color:#87ceeb">Ver proyecto</a> | <a href="#" style="color:#87ceeb">Repositorio GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Influencers del Conocimiento</h3>
+        <div class="details">
+          <ul>
+            <li>Sitio web para un proyecto de investigación universitario.</li>
+            <li>Enfocado en la difusión del conocimiento académico.</li>
+            <li><a href="#" style="color:#87ceeb">Ver proyecto</a> | <a href="#" style="color:#87ceeb">Repositorio GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education">
+      <h2>Formación Académica</h2>
+      <div class="education">
+        <h3>Ingeniería Informática <span style="float:right; font-size:14px; color:#aaa">Actual</span></h3>
+        <div class="details">
+          <ul>
+            <li>Universidad Blas Pascal</li>
+          </ul>
+        </div>
+      </div>
+      <div class="education">
+        <h3>Curso de Desarrollo Web <span style="float:right; font-size:14px; color:#aaa"></span></h3>
+        <div class="details">
+          <ul>
+            <li>Academia Mastermind de NateGentille</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Idiomas</h2>
+      <div class="details">
+        <ul>
+          <li>Inglés - Nivel medio</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Habilidades Técnicas</h2>
+      <div class="tags">
+        <span>C++</span><span>Python</span><span>HTML5</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>SQL</span>
+        <span>Visual Studio</span><span>Node.js</span><span>phpMyAdmin</span><span>cPanel</span><span>Qt Creator</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
